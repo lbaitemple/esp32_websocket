@@ -8,6 +8,6 @@ dict = {}  # Store data in dict
 dict['method'] = 'PWM'  # Poll temperature sensor
 dict['Pin'] = 12  # Read ESP32 internal temp
 dict['freq'] = 100  # Recor
-dict['duty']=sys.argv[1]
+dict['duty']=0.15
 
 ws.send(json.dumps(dict))
