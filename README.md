@@ -7,6 +7,7 @@ sudo pip3 install adafruit-ampy
 Once you have ampy, please verify that you have the serial port connected to esp32. Generally, the port on MacOS is
 /dev/cu.SLAB_USBtoUART
 ```
+ git clone https://github.com/lbaitemple/esp32_websocket
  cd esp32/
  ampy microWebSocket.py
  ampy microWebTemplate.py
