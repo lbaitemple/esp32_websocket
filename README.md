@@ -8,7 +8,7 @@ Once you have ampy, please verify that you have the serial port connected to esp
 /dev/cu.SLAB_USBtoUART
 ```
  git clone https://github.com/lbaitemple/esp32_websocket
- cd esp32/
+ cd esp32_websocket/
  ampy microWebSocket.py
  ampy microWebTemplate.py
  ampy microWebSrv.py
