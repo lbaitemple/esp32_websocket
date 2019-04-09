@@ -13,3 +13,19 @@ Once you have ampy, please verify that you have the serial port connected to esp
  ampy microWebSrv.py
  ampy ws.py
 ```
+
+If you everything runs fine, you can use the following command to connect esp32 for REPL
+```
+screen /dev/cu.SLAB_USBtoUART 115200
+
+```
+It allows you to serially connect to esp32 (given you have wifi connection in boot.py), you will need to run
+```
+import ws
+```
+
+Open another terminal, you will need to do
+```
+cd client
+python onPi.py
+```
