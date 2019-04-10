@@ -9,6 +9,7 @@ Once you have ampy, please verify that you have the serial port connected to esp
 ```
  git clone https://github.com/lbaitemple/esp32_websocket
  cd esp32_websocket/
+ cd esp32
  ampy microWebSocket.py
  ampy microWebTemplate.py
  ampy microWebSrv.py
@@ -27,6 +28,8 @@ import ws
 
 Open another terminal, you will need to do
 ```
+sudo pip install websocket-client
+cd esp32_websocket/
 cd client
 python onPi.py
 ```
