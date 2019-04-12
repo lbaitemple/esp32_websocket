@@ -3,15 +3,24 @@ from microWebSrv import MicroWebSrv
 import json
 from time import sleep
 
+pwmPins=[0, 2, 4, 5, 12, 13, 14, 15]
+
 def cb_receive_text(webSocket, msg) :
+
     print("WS RECV TEXT : %s" % msg)
     dict=json.loads(msg)
     print(dict)
     if (dict['method']=="PWM"):
         pv=machine.Pin(int(dict['Pin']))
-        pwmc=machine.PWM(pv)
-        pwmc.freq(int(dict['freq']))
-        pwmc.duty(int(float(dict['duty'])*1024))
+        if (int(dict['Pin'])  in pwmPins):
+            pwmc=machine.PWM(pv)
+            pwmc.freq(int(dict['freq']))
+            pwmc.duty(int(float(dict['duty'])*1024))
+        else:
+            print("---> WRONG PWM PIN {}".format(int(dict['Pin'])))
+#    elif (dict['method']=="ADC"):
+#        pv=machine.ADC(int(dict['Pin']))
+#        webSocket.SendText("Reply for %s" % pv.read())
     else:
        print("cmd not implemented")
 
