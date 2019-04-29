@@ -37,7 +37,7 @@ def getKey():
 
 if __name__=="__main__":
     settings = termios.tcgetattr(sys.stdin)
-    ws = create_connection('ws://172.24.1.108')
+    ws = create_connection('ws://micropython.local')
     x = 0
     y = 0
     z = 0
