@@ -14,6 +14,12 @@ Once you have ampy, please verify that you have the serial port connected to esp
  ampy ws.py
 ```
 
+Now,  you can setup the wifi and let esp32 ipaddress as micropython.local. To do that
+```
+cd ..\network
+nano -c boot.py
+```
+
 If you everything runs fine, you can use the following command to connect esp32 for REPL
 ```
 screen /dev/cu.SLAB_USBtoUART 115200
