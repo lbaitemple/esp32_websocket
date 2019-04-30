@@ -32,7 +32,10 @@ If you everything runs fine, you can use the following command to connect esp32 
 screen /dev/cu.SLAB_USBtoUART 115200
 import boot
 ```
-To exit from screen, you can use ctrl-A and ctrl-\ to exit.
+To exit from screen, you can use ctrl-A and ctrl-\ to exit. If everything goes well, you will have a fixed ip addresss for esp32. You can pin the address using the command in a new terminal window.
+```
+ping micropython.local
+```
 
 It allows you to serially connect to esp32 (given you have wifi connection in boot.py), you will need to run
 ```
@@ -44,3 +47,4 @@ Open another terminal, you will need to do
 cd client
 python onPi.py
 ```
+You can also see the ip address in onPi.py is micropython.local.
