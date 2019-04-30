@@ -2,7 +2,7 @@ from websocket import create_connection
 import json
 import sys
 
-ws = create_connection('ws://172.24.1.108')
+ws = create_connection('ws://micropython.local.')
 
 dict = {}  # Store data in dict
 dict['method'] = 'PWM'  # Poll temperature sensor
