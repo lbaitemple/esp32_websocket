@@ -19,11 +19,18 @@ Now,  you can setup the wifi and let esp32 ipaddress as micropython.local. To do
 cd ..\network
 nano -c boot.py
 ```
+You can change the wifi access point and password in line 12. After that, you can copy two files into esp32
+
+```
+ampy slimDNS.py 
+ampy boot.py
+
+```
 
 If you everything runs fine, you can use the following command to connect esp32 for REPL
 ```
 screen /dev/cu.SLAB_USBtoUART 115200
-
+import boot
 ```
 It allows you to serially connect to esp32 (given you have wifi connection in boot.py), you will need to run
 ```
