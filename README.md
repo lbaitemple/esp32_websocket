@@ -32,6 +32,8 @@ If you everything runs fine, you can use the following command to connect esp32 
 screen /dev/cu.SLAB_USBtoUART 115200
 import boot
 ```
+To exit from screen, you can use ctrl-A and ctrl-\ to exit.
+
 It allows you to serially connect to esp32 (given you have wifi connection in boot.py), you will need to run
 ```
 import ws
