@@ -44,6 +44,7 @@ import ws
 
 Open another terminal, you will need to do
 ```
+sudo pip install websocket-client
 cd client
 python onPi.py
 ```
